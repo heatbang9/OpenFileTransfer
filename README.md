@@ -81,4 +81,4 @@ PC/macOS/Windows, 모바일 네이티브, 웹앱/PWA 선택지는 [docs/platform
 
 ## 디자인 콘셉트
 
-앱 아이콘과 UI 색상 체계는 [docs/brand-design.md](docs/brand-design.md)에 정리했습니다. 기본 컨셉은 연한 초록색 둥근 아이콘, 태극형 양방향 흐름, 위/아래 화살표입니다.
+앱 아이콘과 UI 색상 체계는 [docs/brand-design.md](docs/brand-design.md)에 정리했습니다. 기본 컨셉은 연한 초록색 둥근 아이콘, 상단 우측에서 좌측으로 흐르는 화살표, 하단 좌측에서 우측으로 흐르는 화살표가 반반 맞물린 태극형 전송 마크입니다.
