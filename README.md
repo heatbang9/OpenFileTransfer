@@ -67,3 +67,6 @@ protoc \
 
 자세한 내용은 [docs/security-and-transport.md](docs/security-and-transport.md)를 참고하세요.
 
+## 플랫폼 검토
+
+PC/macOS/Windows, 모바일 네이티브, 웹앱/PWA 선택지는 [docs/platform-options.md](docs/platform-options.md)에 정리했습니다.
