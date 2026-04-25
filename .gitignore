@@ -1,0 +1,12 @@
+.DS_Store
+node_modules/
+npm-debug.log*
+dist/
+coverage/
+.env
+apps/pc-node/received/
+apps/mobile_flutter/.dart_tool/
+apps/mobile_flutter/build/
+apps/mobile_flutter/.flutter-plugins
+apps/mobile_flutter/.flutter-plugins-dependencies
+

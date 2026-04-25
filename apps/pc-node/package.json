@@ -1,0 +1,18 @@
+{
+  "name": "@openfiletransfer/pc-node",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "oftpc": "./src/cli.js"
+  },
+  "scripts": {
+    "oftpc": "node ./src/cli.js",
+    "smoke": "node ./src/smoke.js"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.14.0",
+    "@grpc/proto-loader": "^0.8.0",
+    "commander": "^14.0.2"
+  }
+}

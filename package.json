@@ -1,0 +1,15 @@
+{
+  "name": "open-file-transfer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "UPnP/SSDP discovery and gRPC file transfer apps for PC and mobile.",
+  "workspaces": [
+    "apps/pc-node"
+  ],
+  "scripts": {
+    "pc": "npm --workspace apps/pc-node run oftpc",
+    "smoke": "npm --workspace apps/pc-node run smoke",
+    "lint:proto": "node scripts/check-proto.js"
+  }
+}
