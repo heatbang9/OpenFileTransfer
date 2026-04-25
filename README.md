@@ -70,3 +70,7 @@ protoc \
 ## 플랫폼 검토
 
 PC/macOS/Windows, 모바일 네이티브, 웹앱/PWA 선택지는 [docs/platform-options.md](docs/platform-options.md)에 정리했습니다.
+
+## 디자인 콘셉트
+
+앱 아이콘과 UI 색상 체계는 [docs/brand-design.md](docs/brand-design.md)에 정리했습니다. 기본 컨셉은 연한 초록색 둥근 아이콘, 태극형 양방향 흐름, 위/아래 화살표입니다.
