@@ -1,6 +1,14 @@
 # OpenFileTransfer
 
+![OpenFileTransfer icon](assets/brand/openfiletransfer-icon-512.png)
+
 OpenFileTransfer는 같은 로컬 네트워크의 디바이스를 UPnP/SSDP로 찾고, gRPC로 파일을 주고받는 통신 앱입니다.
+
+## 관련 저장소
+
+- [OpenFileTransferProto](https://github.com/heatbang9/OpenFileTransferProto): 공통 gRPC proto 계약
+- [OpenFileTransferPC](https://github.com/heatbang9/OpenFileTransferPC): macOS/Windows PC 앱
+- [OpenFileTransferMobile](https://github.com/heatbang9/OpenFileTransferMobile): Android/iOS Flutter 앱
 
 ## 목표 구조
 
