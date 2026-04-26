@@ -34,6 +34,20 @@ OpenFileTransfer 앱은 디바이스마다 서버 롤과 클라이언트 롤을 
 
 서버가 네트워크상 아무 연결도 없는 모바일 앱에 임의로 먼저 접속하는 방식은 사용하지 않습니다. 모바일/PC 클라이언트가 스트림을 유지해야 서버 주도 알림처럼 동작합니다.
 
+## 백그라운드 실행 흐름
+
+### PC
+
+Electron 앱은 창과 서버 프로세스의 생명주기를 분리합니다. 사용자가 창 닫기 버튼을 누르면 앱을 종료하지 않고 트레이로 숨깁니다. 트레이 메뉴에서 다시 열기, 서버 시작/중지, 완전 종료를 수행합니다. 완전 종료 시에는 이벤트 구독과 gRPC 서버를 정리한 뒤 앱을 닫습니다.
+
+### Android
+
+Flutter 앱은 파일 전송 또는 수신을 시작할 때 foreground service를 시작합니다. foreground service 알림은 현재 파일 이름, 전송 방향, 진행 퍼센트를 표시합니다. 실제 gRPC 전송 루프가 붙으면 chunk 전송마다 모바일 서비스 API의 진행률 갱신을 호출합니다.
+
+### iOS
+
+iOS는 Android foreground service와 같은 장시간 상주 작업 모델이 아니므로, gRPC 스트림만으로 백그라운드 대용량 전송을 보장하지 않습니다. iOS 안정화 단계에서는 HTTP/HTTPS 기반 background transfer 경로를 추가하고, gRPC는 탐색/제어/이벤트에 우선 사용하는 방향을 검토합니다.
+
 ## proto 분리
 
 `proto/`는 별도 public 저장소인 `OpenFileTransferProto`를 submodule로 연결합니다. 앱 저장소는 플랫폼별 구현과 UX에 집중하고, wire contract는 독립적으로 버전 관리합니다.
