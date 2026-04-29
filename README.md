@@ -4,7 +4,7 @@
 
 OpenFileTransfer는 같은 로컬 네트워크의 디바이스를 UPnP/SSDP로 찾고, gRPC로 파일을 주고받는 통신 앱입니다.
 
-전체 구현 상태와 남은 후보는 [docs/feature-status.md](docs/feature-status.md)에 정리합니다.
+전체 구현 상태와 남은 후보는 [docs/feature-status.md](docs/feature-status.md)에 정리합니다. OS 제약, 계정 준비, 빌드/배포 흐름은 [docs/release-and-constraints.md](docs/release-and-constraints.md)에 정리합니다.
 
 ## 관련 저장소
 
