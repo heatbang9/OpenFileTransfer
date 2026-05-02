@@ -16,7 +16,7 @@
 
 - PC: Electron 앱, 서버/클라이언트 롤, 트레이, 알림, 승인/화이트리스트, 1:N 전송, 패키징 스크립트까지 구현했습니다.
 - Mobile: Flutter 앱, SSDP/gRPC 클라이언트, 모바일 임시 서버, 승인/화이트리스트, Android foreground service 진행률/수신 대기 알림, 1:N 전송까지 구현했습니다.
-- Web: Vercel 정적 배포용 WebRTC 브라우저 앱, QR/공유 링크, 여러 파일 큐, 선택 AES-GCM 암호화까지 구현했습니다.
+- Web: Vercel 배포용 WebRTC 브라우저 앱, Runtime Cache 기반 Nearby 방, QR/공유 링크, 여러 파일 큐, 선택 AES-GCM 암호화까지 구현했습니다.
 - Proto: 별도 저장소를 submodule로 두는 구조입니다.
 - 통신: 1단계는 gRPC plaintext HTTP/2 + 앱 레벨 AES-256-GCM 파일 payload 암호화입니다.
 
@@ -107,7 +107,7 @@
 - iOS는 임의 gRPC 서버를 장시간 백그라운드에서 유지하기 어렵습니다. 모바일-to-모바일 수신은 앱 전면/단기 백그라운드 중심으로 두고, 대용량 안정 전송은 HTTP/HTTPS background transfer fallback을 둡니다.
 - macOS와 Windows는 데스크톱 앱이 백그라운드 서버 역할을 안정적으로 수행할 수 있지만, 사용자 배포에는 코드 서명과 OS 신뢰 체계가 중요합니다.
 - HTTPS/gRPC TLS는 2단계로 두되, 현재도 파일 payload는 앱 레벨 암호화를 유지합니다.
-- Web은 브라우저 보안 모델상 UPnP/SSDP 자동 탐색을 하지 않습니다. 초대/응답 코드로 WebRTC 연결을 만들고, 파일 데이터는 Vercel 서버를 거치지 않습니다.
+- Web은 브라우저 보안 모델상 UPnP/SSDP 자동 탐색을 하지 않습니다. 대신 같은 Nearby 방의 브라우저 디바이스를 Vercel Runtime Cache presence로 목록화하고, 초대/응답 코드 또는 자동 signaling으로 WebRTC 연결을 만듭니다. 파일 데이터는 Vercel 서버를 거치지 않습니다.
 
 ## 아직 남은 제품 피쳐
 
