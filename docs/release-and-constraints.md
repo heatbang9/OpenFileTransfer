@@ -16,7 +16,7 @@
 
 - PC: Electron 앱, 서버/클라이언트 롤, 트레이, 알림, 승인/화이트리스트, 1:N 전송, 패키징 스크립트까지 구현했습니다.
 - Mobile: Flutter 앱, SSDP/gRPC 클라이언트, 모바일 임시 서버, 승인/화이트리스트, Android foreground service 진행률/수신 대기 알림, 1:N 전송까지 구현했습니다.
-- Web: Vercel 배포용 WebRTC 브라우저 앱, Runtime Cache 기반 Nearby 방, QR 스캔/공유 링크, 여러 파일 큐, File System Access 바로 저장, TURN 설정, 전송 이력, 선택 AES-GCM 암호화까지 구현했습니다.
+- Web: Vercel 배포용 WebRTC 브라우저 앱, Runtime Cache 기반 Nearby 방, QR 스캔/공유 링크, 여러 파일 큐, File System Access/OPFS 저장, TURN 설정/테스트, PWA 캐시, 실패 큐 재시도, 전송 이력, 선택 AES-GCM 암호화까지 구현했습니다.
 - Proto: 별도 저장소를 submodule로 두는 구조입니다.
 - 통신: 1단계는 gRPC plaintext HTTP/2 + 앱 레벨 AES-256-GCM 파일 payload 암호화입니다.
 
@@ -118,6 +118,7 @@
 - GitHub Releases 기반 PC auto update
 - Web 외부 realtime signaling 기반 자동 방 매칭
 - Web TURN 서버 계정 발급과 네트워크별 relay 품질 테스트
+- Web 청크 단위 이어받기와 파일 해시 검증
 
 ## 공식 참고
 

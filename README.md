@@ -38,7 +38,7 @@ OpenFileTransfer는 같은 로컬 네트워크의 디바이스를 UPnP/SSDP로 �
 - PC Electron `electron-builder` 기반 macOS/Windows 패키징 스크립트
 - Android foreground service 기반 모바일 송신/수신 진행률 알림 레이어
 - Flutter 모바일 `SendFile`, `ListFiles`, `ReceiveFile`, `SubscribeEvents` 직접 gRPC 클라이언트
-- Vercel 웹 앱 기반 WebRTC P2P 파일 전송, Nearby 방 디바이스 목록, QR 스캔/공유 링크, TURN 설정, 바로 저장, 전송 이력, 선택 AES-GCM 암호화
+- Vercel 웹 앱 기반 WebRTC P2P 파일 전송, Nearby 방 디바이스 목록, QR 스캔/공유 링크, TURN 설정/테스트, PWA 캐시, 실패 큐 재시도, File System Access/OPFS 저장, 전송 이력, 선택 AES-GCM 암호화
 
 ## PC → Mobile 동작 상태
 
